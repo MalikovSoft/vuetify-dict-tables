@@ -1,0 +1,3 @@
+export const UPDATE_STATUSES = `UPDATE_STATUSES`;
+export const UPDATE_STATUS = `UPDATE_STATUS`;
+export const DELETE_STATUS = `DELETE_STATUS`;

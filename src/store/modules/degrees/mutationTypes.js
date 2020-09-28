@@ -1,0 +1,3 @@
+export const UPDATE_DEGREES = `UPDATE_DEGREES`;
+export const UPDATE_DEGREE = `UPDATE_DEGREE`;
+export const DELETE_DEGREE = `DELETE_DEGREE`;

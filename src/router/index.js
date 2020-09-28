@@ -1,29 +1,51 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import AcademicDegrees from '../views/AcademicDegrees.vue';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'AcademicDegrees',
+    component: AcademicDegrees,
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+    path: '/AcademicStatuses',
+    name: 'AcademicStatuses',
+    component: () => import('../views/AcademicStatuses.vue'),
+  },
+  {
+    path: '/Positions',
+    name: 'Positions',
+    component: () => import('../views/Positions.vue'),
+  },
+  {
+    path: '/Institutes',
+    name: 'Institutes',
+    component: () => import('../views/Institutes.vue'),
+  },
+  {
+    path: '/Faculties',
+    name: 'Faculties',
+    component: () => import('../views/Faculties.vue'),
+  },
+  {
+    path: '/Chairs',
+    name: 'Chairs',
+    component: () => import('../views/Chairs.vue'),
+  },
+  {
+    path: '/Lecturers',
+    name: 'Lecturers',
+    component: () => import('../views/Lecturers.vue'),
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'abstract',
   base: process.env.BASE_URL,
-  routes
-})
-
-export default router
+  routes,
+});
+console.log(router.currentRoute.path);
+export default router;

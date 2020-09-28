@@ -1,0 +1,3 @@
+export const UPDATE_CHAIRS = `UPDATE_CHAIRS`;
+export const UPDATE_CHAIR = `UPDATE_CHAIR`;
+export const DELETE_CHAIR = `DELETE_CHAIR`;
